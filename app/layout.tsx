@@ -17,11 +17,11 @@ const sans = Manrope({
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://sprout541.github.io";
-const title = "Ariele Radford — Full-stack developer + Nurse";
+const title = "Ariele — Full-stack developer + Nurse";
 const description =
-  "Ariele Radford is a full-stack developer, Nurse, and video game fan. Her work includes Haven, Rust Director, and TC Base Repair.";
+  "Ariele is a full-stack developer, Nurse, and video game fan. Her work includes Haven, Rust Director, and TC Base Repair.";
 const socialDescription =
-  "Web platforms, subscription flows, and Rust server tools built by Ariele Radford.";
+  "Web platforms, subscription flows, and Rust server tools built by Ariele.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

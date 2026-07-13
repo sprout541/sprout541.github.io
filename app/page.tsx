@@ -119,9 +119,9 @@ export default function Home() {
 
       <header className="site-header">
         <nav className="nav-shell shell" aria-label="Primary">
-          <a className="brand" href="#top" aria-label="Ariele Radford, back to top">
-            <span className="brand-mark" aria-hidden="true">AR</span>
-            <span>Ariele Radford</span>
+          <a className="brand" href="#top" aria-label="Ariele, back to top">
+            <span className="brand-mark" aria-hidden="true">A</span>
+            <span>Ariele</span>
           </a>
           <div className="nav-links">
             <a href="#work">Work</a>
@@ -136,7 +136,7 @@ export default function Home() {
         <section className="hero shell" id="top" aria-labelledby="hero-title">
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-copy">
-            <p className="eyebrow hero-eyebrow">Ariele Radford · Portfolio</p>
+            <p className="eyebrow hero-eyebrow">Ariele · Portfolio</p>
             <h1 id="hero-title">
               Twelve-hour shifts{" "}
               <em>taught me how to stay calm</em>{" "}
@@ -316,7 +316,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="shell">
-          <span>Ariele Radford</span>
+          <span>Ariele</span>
           <span>Full-stack developer + Nurse</span>
         </div>
       </footer>

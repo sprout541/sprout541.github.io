@@ -1,6 +1,6 @@
-# Ariele Radford — Portfolio
+# Ariele — Portfolio
 
-The source for [Ariele Radford’s portfolio](https://sprout541.github.io), a
+The source for [Ariele’s portfolio](https://sprout541.github.io), a
 single-page portfolio presenting her work as a full-stack developer and Nurse.
 
 ## Local development
