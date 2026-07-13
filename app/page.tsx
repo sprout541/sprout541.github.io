@@ -138,15 +138,18 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow hero-eyebrow">Ariele Radford · Portfolio</p>
             <h1 id="hero-title">
-              I&apos;m Ariele—
-              <em>a full-stack developer,</em>
-              Nurse, and video game fan.
+              Twelve-hour shifts{" "}
+              <em>taught me how to stay calm</em>{" "}
+              when everything&apos;s on fire.
             </h1>
             <div className="hero-actions">
               <a className="primary-link" href="#work">
                 See what I&apos;ve built <span aria-hidden="true">↓</span>
               </a>
-              <p>I build websites, subscription systems, and tools for Rust servers.</p>
+              <p>
+                Turns out that&apos;s most of software too. I build the web apps, you stop
+                losing your mind over your website.
+              </p>
             </div>
           </div>
 

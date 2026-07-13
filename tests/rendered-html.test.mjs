@@ -30,8 +30,10 @@ test("server-renders Ariele Radford's portfolio", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Ariele Radford — Full-stack developer \+ Nurse<\/title>/i);
-  assert.match(html, /I&#x27;m Ariele|I&apos;m Ariele|I’m Ariele/);
-  assert.match(html, /Nurse, and video game fan/);
+  assert.match(html, /Twelve-hour shifts/);
+  assert.match(html, /taught me how to stay calm/);
+  assert.match(html, /when everything(?:&#x27;|&apos;|’)s on fire/);
+  assert.match(html, /you stop losing your mind over your website/);
   assert.match(html, /Haven/);
   assert.match(html, /Rust Director/);
   assert.match(html, /src="\/rust-director-console\.png"/);
