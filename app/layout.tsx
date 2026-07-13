@@ -19,7 +19,9 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://sprout541.github.io";
 const title = "Ariele Radford — Full-stack developer + Nurse";
 const description =
-  "Portfolio of Ariele Radford, a full-stack developer and Nurse building clear, dependable systems for people doing real work.";
+  "Portfolio of Ariele Radford, a full-stack developer and Nurse. Selected work includes Haven, Rust Director, and TC Base Repair.";
+const socialDescription =
+  "Selected work in responsive websites, subscription signup and billing, and Rust server management tools.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -30,8 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title,
-    description:
-      "Clear interfaces, dependable full-stack systems, and thoughtful tools for real workflows.",
+    description: socialDescription,
     type: "website",
     url: "/",
     images: [
@@ -46,8 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title,
-    description:
-      "Clear interfaces, dependable full-stack systems, and thoughtful tools for real workflows.",
+    description: socialDescription,
     images: ["/og.png"],
   },
 };

@@ -30,13 +30,15 @@ test("server-renders Ariele Radford's portfolio", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Ariele Radford — Full-stack developer \+ Nurse<\/title>/i);
-  assert.match(html, /I build clear,/);
-  assert.match(html, /dependable systems/);
+  assert.match(html, /I build marketing websites,/);
+  assert.match(html, /subscription systems/);
   assert.match(html, /Haven/);
   assert.match(html, /Rust Director/);
   assert.match(html, /src="\/rust-director-console\.png"/);
   assert.match(html, /Rust Director desktop server manager/);
   assert.match(html, /TC Base Repair/);
+  assert.match(html, /src="\/tc-base-repair\.png"/);
+  assert.match(html, /TC Base Repair panel in Rust/);
   assert.match(html, /Developer \+ Nurse/);
   assert.match(html, /Skip to content/);
   assert.match(html, /href="https:\/\/myhaven\.pet"/);
@@ -56,6 +58,7 @@ test("removes the disposable starter and keeps approved claims", async () => {
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
   await access(new URL("../public/og.png", import.meta.url));
   await access(new URL("../public/rust-director-console.png", import.meta.url));
+  await access(new URL("../public/tc-base-repair.png", import.meta.url));
 
   assert.doesNotMatch(page, /_sites-preview|SkeletonPreview/);
   assert.doesNotMatch(layout, /codex-preview|Starter Project/);
@@ -63,6 +66,10 @@ test("removes the disposable starter and keeps approved claims", async () => {
   assert.match(page, /60-day trial/);
   assert.match(page, /Stripe Checkout/);
   assert.match(page, /automatically calculating and consuming the required resources/);
+  assert.doesNotMatch(
+    page,
+    /Built for the whole journey|Update once|thoughtful interfaces|coherent journey|full-featured|more efficiently|Human needs, translated/i,
+  );
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
   assert.match(css, /:focus-visible/);
 });

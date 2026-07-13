@@ -312,16 +312,6 @@ section[id] {
   text-transform: uppercase;
 }
 
-.status-dot::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  margin-right: 7px;
-  display: inline-block;
-  border-radius: 50%;
-  background: var(--rust);
-}
-
 .hero-system-card > p {
   margin: 0;
   font-family: var(--font-display), Georgia, serif;
@@ -733,9 +723,9 @@ section[id] {
 }
 
 .rust-card--director .rust-visual { background: radial-gradient(circle at 80% 0%, rgba(120, 153, 142, 0.33), transparent 38%), #10302f; }
-.rust-card--repair .rust-visual { background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 34px 34px; }
+.rust-card--repair .rust-visual { background: radial-gradient(circle at 78% 45%, rgba(200, 95, 61, 0.2), transparent 46%), linear-gradient(135deg, #3b3a32, #242722); }
 
-.director-screenshot {
+.project-screenshot {
   width: min(100%, 620px);
   margin: 0;
   padding: 8px;
@@ -745,7 +735,7 @@ section[id] {
   box-shadow: 0 28px 64px rgba(0, 0, 0, 0.26);
 }
 
-.director-screenshot img {
+.project-screenshot img {
   width: 100%;
   height: auto;
   display: block;
@@ -753,30 +743,7 @@ section[id] {
   background: #11161a;
 }
 
-.repair-ui {
-  width: min(100%, 520px);
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: center;
-  gap: 20px;
-}
-
-.base-plan { position: relative; min-height: 250px; }
-.base-block { position: absolute; border: 2px solid var(--teal); background: rgba(120, 153, 142, 0.15); }
-.block-a { width: 96px; height: 96px; top: 70px; left: 38px; }
-.block-b { width: 96px; height: 96px; top: 70px; left: 134px; }
-.block-c { width: 96px; height: 96px; top: -26px; left: 134px; }
-.block-d { width: 68px; height: 68px; top: 166px; left: 66px; }
-.tc-core { position: absolute; z-index: 2; width: 56px; height: 56px; top: 91px; left: 114px; display: grid; place-items: center; border-radius: 50%; background: var(--rust); color: #fff; font-size: 0.65rem; font-weight: 800; box-shadow: 0 0 0 10px var(--cream), 0 0 0 12px var(--rust); }
-.repair-pulse { position: absolute; border: 1px solid rgba(200, 95, 61, 0.4); border-radius: 50%; }
-.pulse-one { width: 170px; height: 170px; top: 34px; left: 56px; }
-.pulse-two { width: 224px; height: 224px; top: 7px; left: 29px; }
-
-.repair-summary { position: relative; z-index: 3; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(251, 248, 242, 0.94); box-shadow: 0 18px 42px rgba(23, 59, 58, 0.16); }
-.repair-label { color: var(--rust-dark); font-size: 0.52rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; }
-.repair-summary > strong { margin: 8px 0 18px; display: block; color: var(--teal); font-family: var(--font-display), Georgia, serif; font-size: 1.2rem; font-weight: 400; }
-.resource-row { padding: 8px 0; display: flex; justify-content: space-between; border-top: 1px solid var(--line); color: #526a65; font-size: 0.56rem; }
-.repair-button { margin-top: 15px; padding: 9px; border-radius: 99px; background: var(--rust); color: #fff; font-size: 0.54rem; font-weight: 800; text-align: center; text-transform: uppercase; }
+.repair-screenshot img { background: #17140f; }
 
 .rust-copy { padding: 0 clamp(28px, 4vw, 54px) clamp(34px, 5vw, 58px); }
 .rust-copy h3 { margin-top: 45px; font-size: clamp(2.8rem, 4.6vw, 5rem); }
@@ -839,8 +806,6 @@ section[id] {
   .haven-case { grid-template-columns: 1fr; }
   .haven-visual { min-height: 590px; margin: 0 24px 24px; }
   .rust-visual { min-height: 360px; }
-  .repair-ui { grid-template-columns: 1fr; }
-  .base-plan { display: none; }
 }
 
 @media (max-width: 760px) {
@@ -877,8 +842,6 @@ section[id] {
   .rust-grid { grid-template-columns: 1fr; }
   .rust-card { border-radius: 24px; }
   .rust-visual { min-height: 340px; }
-  .repair-ui { grid-template-columns: 1.05fr 0.95fr; }
-  .base-plan { display: block; transform: scale(0.88); transform-origin: center; }
   .approach-grid { grid-template-columns: 1fr; gap: 64px; }
   .availability-inner { grid-template-columns: 1fr; gap: 44px; }
 }
@@ -895,9 +858,8 @@ section[id] {
   .haven-visual { min-height: 470px; }
   .signup-card { width: calc(100% - 36px); }
   .rust-visual { min-height: 300px; padding: 18px; }
-  .rust-card--director .rust-visual { min-height: auto; padding: 18px 12px; }
-  .repair-ui { grid-template-columns: 1fr; }
-  .base-plan { display: none; }
+  .rust-card--director .rust-visual,
+  .rust-card--repair .rust-visual { min-height: auto; padding: 28px 12px; }
   .site-footer .shell { min-height: 96px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 4px; }
 }
 
