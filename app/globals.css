@@ -735,59 +735,23 @@ section[id] {
 .rust-card--director .rust-visual { background: radial-gradient(circle at 80% 0%, rgba(120, 153, 142, 0.33), transparent 38%), #10302f; }
 .rust-card--repair .rust-visual { background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 34px 34px; }
 
-.director-ui {
-  width: min(100%, 520px);
-  overflow: hidden;
+.director-screenshot {
+  width: min(100%, 620px);
+  margin: 0;
+  padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 18px;
-  background: #0b2525;
+  background: rgba(244, 239, 230, 0.07);
   box-shadow: 0 28px 64px rgba(0, 0, 0, 0.26);
 }
 
-.director-topbar {
-  height: 52px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.58rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+.director-screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  background: #11161a;
 }
-
-.director-mark {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
-  background: var(--rust);
-  color: #fff;
-  font-weight: 800;
-}
-
-.live-pill {
-  margin-left: auto;
-  padding: 4px 8px;
-  border-radius: 99px;
-  background: rgba(120, 153, 142, 0.16);
-  color: #bcd2ca;
-}
-
-.director-body { display: grid; grid-template-columns: 110px 1fr; }
-.director-sidebar { padding: 18px 12px; display: grid; align-content: start; gap: 8px; border-right: 1px solid rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.46); font-size: 0.55rem; }
-.director-sidebar span { padding: 8px; border-radius: 7px; }
-.director-sidebar .sidebar-active { background: rgba(200, 95, 61, 0.18); color: #f5c0ae; }
-.director-panel { padding: 20px; }
-.metric-row { margin-bottom: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.metric-row div { padding: 14px; display: grid; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; }
-.metric-row strong { color: #fff; font-size: 1.2rem; }
-.metric-row span { color: rgba(255, 255, 255, 0.45); font-size: 0.5rem; text-transform: uppercase; }
-.player-row { margin-top: 8px; padding: 10px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 9px; border-radius: 8px; background: rgba(255, 255, 255, 0.045); color: rgba(255, 255, 255, 0.66); font-size: 0.52rem; }
-.player-row i { width: 7px; height: 7px; border-radius: 50%; background: var(--sage); }
-.player-row b { color: #f2aa91; font-size: 0.48rem; }
 
 .repair-ui {
   width: min(100%, 520px);
@@ -931,9 +895,7 @@ section[id] {
   .haven-visual { min-height: 470px; }
   .signup-card { width: calc(100% - 36px); }
   .rust-visual { min-height: 300px; padding: 18px; }
-  .director-body { grid-template-columns: 78px 1fr; }
-  .director-panel { padding: 12px; }
-  .metric-row div { padding: 10px; }
+  .rust-card--director .rust-visual { min-height: auto; padding: 18px 12px; }
   .repair-ui { grid-template-columns: 1fr; }
   .base-plan { display: none; }
   .site-footer .shell { min-height: 96px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 4px; }

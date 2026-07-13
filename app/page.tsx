@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type HavenDetail = {
   number: string;
   title: string;
@@ -49,9 +51,9 @@ const rustProjects: RustProject[] = [
   {
     label: "Rust server management",
     title: "Rust Director",
-    headline: "Modern server operations, inside the game.",
+    headline: "Modern Rust server operations, all in one place.",
     description:
-      "Built a full-featured Rust server management plugin that gives admins a modern in-game interface for managing players, moderation, events, and server operations more efficiently.",
+      "Built a full-featured Rust server management tool that gives admins a modern interface for managing players, moderation, events, and day-to-day server operations more efficiently.",
     visual: "director",
   },
   {
@@ -77,30 +79,17 @@ function Arrow() {
 
 function DirectorVisual() {
   return (
-    <div className="director-ui" aria-hidden="true">
-      <div className="director-topbar">
-        <span className="director-mark">RD</span>
-        <span>Live operations</span>
-        <span className="live-pill">Online</span>
-      </div>
-      <div className="director-body">
-        <div className="director-sidebar">
-          <span className="sidebar-active">Overview</span>
-          <span>Players</span>
-          <span>Moderation</span>
-          <span>Events</span>
-        </div>
-        <div className="director-panel">
-          <div className="metric-row">
-            <div><strong>Live</strong><span>server status</span></div>
-            <div><strong>Active</strong><span>event tools</span></div>
-          </div>
-          <div className="player-row"><i /><span>Player activity</span><b>Review</b></div>
-          <div className="player-row"><i /><span>Server event</span><b>Manage</b></div>
-          <div className="player-row"><i /><span>Moderation queue</span><b>Open</b></div>
-        </div>
-      </div>
-    </div>
+    <figure className="director-screenshot">
+      <Image
+        src="/rust-director-console.png"
+        alt="Rust Director desktop server manager showing the RCON Console, command controls, player panel, and command history."
+        width={1167}
+        height={746}
+        loading="lazy"
+        sizes="(max-width: 760px) calc(100vw - 56px), 540px"
+        unoptimized
+      />
+    </figure>
   );
 }
 

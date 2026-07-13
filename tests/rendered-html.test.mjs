@@ -34,6 +34,8 @@ test("server-renders Ariele Radford's portfolio", async () => {
   assert.match(html, /dependable systems/);
   assert.match(html, /Haven/);
   assert.match(html, /Rust Director/);
+  assert.match(html, /src="\/rust-director-console\.png"/);
+  assert.match(html, /Rust Director desktop server manager/);
   assert.match(html, /TC Base Repair/);
   assert.match(html, /Developer \+ Nurse/);
   assert.match(html, /Skip to content/);
@@ -53,6 +55,7 @@ test("removes the disposable starter and keeps approved claims", async () => {
 
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
   await access(new URL("../public/og.png", import.meta.url));
+  await access(new URL("../public/rust-director-console.png", import.meta.url));
 
   assert.doesNotMatch(page, /_sites-preview|SkeletonPreview/);
   assert.doesNotMatch(layout, /codex-preview|Starter Project/);
