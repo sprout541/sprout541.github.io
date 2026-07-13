@@ -19,9 +19,9 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://sprout541.github.io";
 const title = "Ariele Radford — Full-stack developer + Nurse";
 const description =
-  "Portfolio of Ariele Radford, a full-stack developer and Nurse. Selected work includes Haven, Rust Director, and TC Base Repair.";
+  "Ariele Radford is a full-stack developer, Nurse, and video game fan. Her work includes Haven, Rust Director, and TC Base Repair.";
 const socialDescription =
-  "Selected work in responsive websites, subscription signup and billing, and Rust server management tools.";
+  "Web platforms, subscription flows, and Rust server tools built by Ariele Radford.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

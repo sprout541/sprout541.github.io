@@ -30,8 +30,8 @@ test("server-renders Ariele Radford's portfolio", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Ariele Radford — Full-stack developer \+ Nurse<\/title>/i);
-  assert.match(html, /I build marketing websites,/);
-  assert.match(html, /subscription systems/);
+  assert.match(html, /I&#x27;m Ariele|I&apos;m Ariele|I’m Ariele/);
+  assert.match(html, /Nurse, and video game fan/);
   assert.match(html, /Haven/);
   assert.match(html, /Rust Director/);
   assert.match(html, /src="\/rust-director-console\.png"/);
@@ -65,7 +65,7 @@ test("removes the disposable starter and keeps approved claims", async () => {
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.match(page, /60-day trial/);
   assert.match(page, /Stripe Checkout/);
-  assert.match(page, /automatically calculating and consuming the required resources/);
+  assert.match(page, /calculates the materials needed and consumes them automatically/);
   assert.doesNotMatch(
     page,
     /Built for the whole journey|Update once|thoughtful interfaces|coherent journey|full-featured|more efficiently|Human needs, translated/i,

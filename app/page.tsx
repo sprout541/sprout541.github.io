@@ -18,21 +18,21 @@ type RustProject = {
 const havenDetails: HavenDetail[] = [
   {
     number: "01",
-    title: "Marketing website",
+    title: "The marketing site",
     description:
-      "Responsive product pages, pricing, calls to action, trust content, structured metadata, social previews, and mobile layouts.",
+      "I built the responsive product pages, pricing, calls to action, trust content, structured metadata, social previews, and mobile layouts.",
   },
   {
     number: "02",
-    title: "Subscription signup",
+    title: "The signup flow",
     description:
-      "Account registration, email verification and resend states, breeder-site slug selection, Stripe Checkout, a 60-day trial, post-checkout status handling, and recovery states.",
+      "I handled registration, verification and resend states, breeder-site address selection, Stripe Checkout, the 60-day trial, post-checkout status handling, and recovery states.",
   },
   {
     number: "03",
-    title: "Shared plan catalog",
+    title: "Plans that stay in sync",
     description:
-      "The selected tier stays synchronized across public pricing, signup, billing rules, backend entitlements, subscription creation, and account provisioning.",
+      "I used a shared catalog so the selected plan stays consistent across pricing, signup, billing rules, backend entitlements, subscription creation, and account provisioning.",
   },
 ];
 
@@ -51,29 +51,29 @@ const havenStack = [
 const rustProjects: RustProject[] = [
   {
     label: "Rust server management",
-    format: "Desktop application",
+    format: "Desktop app",
     title: "Rust Director",
-    headline: "RCON, player controls, plugins, files, backups, and logs.",
+    headline: "RCON commands, players, plugins, files, backups, and logs in one place.",
     description:
-      "Built a Rust server management tool for admins to run server commands and manage players, moderation, events, and server operations.",
+      "This is where coding and gaming overlap for me. I built Rust Director so server admins can run commands, manage players and moderation, handle events, and take care of routine server work from one desktop app.",
     visual: "director",
   },
   {
     label: "Rust server plugin",
-    format: "In-game interface",
+    format: "In-game plugin",
     title: "TC Base Repair",
-    headline: "Repair an entire base from the Tool Cupboard.",
+    headline: "Repair a whole base from the Tool Cupboard.",
     description:
-      "Developed a Rust plugin that lets authorized players instantly repair an entire base from the Tool Cupboard, automatically calculating and consuming the required resources.",
+      "I built TC Base Repair so authorized players can repair an entire base in one action. The plugin calculates the materials needed and consumes them automatically.",
     visual: "repair",
   },
 ];
 
 const workPractices = [
-  ["01", "Map the workflow", "Account for each step, state, and handoff before implementation."],
-  ["02", "Keep systems aligned", "Use shared data across pricing, signup, billing, and entitlements."],
-  ["03", "Plan recovery paths", "Cover verification resends, checkout outcomes, and provisioning errors."],
-  ["04", "Verify the result", "Test responsive layouts, metadata, signup behavior, and backend rules."],
+  ["01", "Map the whole flow", "I think through every step, state, and handoff before I start building."],
+  ["02", "Keep the pieces in sync", "Pricing, signup, billing, and account access should always agree."],
+  ["03", "Don’t stop at the happy path", "Verification emails fail and checkouts get interrupted. I make sure there’s a clear next step."],
+  ["04", "Test the real experience", "I check layouts, metadata, signup behavior, and backend rules before I call it done."],
 ] as const;
 
 function Arrow() {
@@ -125,7 +125,7 @@ export default function Home() {
           </a>
           <div className="nav-links">
             <a href="#work">Work</a>
-            <a href="#approach">Approach</a>
+            <a href="#approach">About</a>
             <a href="#availability">Availability</a>
           </div>
           <span className="nav-role">Full-stack developer <i /> Nurse</span>
@@ -136,17 +136,17 @@ export default function Home() {
         <section className="hero shell" id="top" aria-labelledby="hero-title">
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-copy">
-            <p className="eyebrow hero-eyebrow">Full-stack developer + Nurse</p>
+            <p className="eyebrow hero-eyebrow">Ariele Radford · Portfolio</p>
             <h1 id="hero-title">
-              I build marketing websites,
-              <em>subscription systems,</em>
-              and Rust server tools.
+              I&apos;m Ariele—
+              <em>a full-stack developer,</em>
+              Nurse, and video game fan.
             </h1>
             <div className="hero-actions">
               <a className="primary-link" href="#work">
-                View projects <span aria-hidden="true">↓</span>
+                See what I&apos;ve built <span aria-hidden="true">↓</span>
               </a>
-              <p>Selected work includes Haven, Rust Director, and TC Base Repair.</p>
+              <p>I build websites, subscription systems, and tools for Rust servers.</p>
             </div>
           </div>
 
@@ -160,19 +160,19 @@ export default function Home() {
             </div>
             <div className="hero-system-card">
               <div className="system-card-top">
-                <span>Ariele Radford</span>
-                <span>Portfolio</span>
+                <span>What I build</span>
+                <span>01</span>
               </div>
-              <p>Full-stack developer</p>
-              <p>Nurse</p>
+              <p>Web platforms</p>
+              <p>Rust server tools</p>
               <div className="system-card-line" />
-              <small>Web platforms · subscriptions · Rust server tools</small>
+              <small>Interfaces, backend services, billing, and account workflows.</small>
             </div>
           </aside>
 
           <div className="hero-services" aria-label="Areas of expertise">
-            <span>Marketing websites</span>
-            <span>Subscription signup</span>
+            <span>Responsive websites</span>
+            <span>Subscription flows</span>
             <span>Stripe billing</span>
             <span>Rust server tools</span>
           </div>
@@ -181,26 +181,26 @@ export default function Home() {
         <section className="work-section" id="work" aria-labelledby="work-title">
           <div className="shell">
             <div className="section-heading reveal">
-              <p className="eyebrow">Selected work</p>
-              <h2 id="work-title">Haven and Rust server tools.</h2>
-              <p>Marketing, subscriptions, and tools for Rust server administration.</p>
+              <p className="eyebrow">A few things I&apos;ve built</p>
+              <h2 id="work-title">From breeder software to Rust server tools.</h2>
+              <p>Haven, Rust Director, and TC Base Repair.</p>
             </div>
 
             <article className="haven-case reveal" aria-labelledby="haven-title">
               <div className="case-copy">
                 <div className="case-kicker">
-                  <span>Breeder platform</span>
-                  <span>Marketing + signup</span>
+                  <span>Breeder website + operations</span>
+                  <span>Marketing + subscriptions</span>
                 </div>
                 <h3 id="haven-title">Haven</h3>
                 <p className="case-lede">
-                  A complete marketing website and self-service subscription signup flow
-                  for a breeder website and operations platform.
+                  Haven is a website and operations platform for breeders. I designed and
+                  built its complete marketing site and self-service subscription signup flow.
                 </p>
                 <p>
-                  I designed and built the responsive marketing site and its signup flow,
-                  including pricing, account registration, verification, Stripe billing,
-                  and account provisioning.
+                  The challenge was keeping the selected plan consistent through verification,
+                  checkout, subscription creation, and account setup. I tied the flow to a
+                  shared tier catalog instead of duplicating those rules at every step.
                 </p>
                 <a className="text-link" href="https://myhaven.pet">
                   Visit myhaven.pet <Arrow />
@@ -275,15 +275,12 @@ export default function Home() {
           <div className="approach-grid shell">
             <div className="approach-intro reveal">
               <p className="eyebrow eyebrow-light">Developer + Nurse</p>
-              <h2 id="approach-title">What nursing brings to my development work.</h2>
+              <h2 id="approach-title">Being a Nurse shapes how I build software.</h2>
               <p>
-                Nursing and software development both require attention to detail, clear
-                communication, calm decision-making, and dependable follow-through.
+                Nursing has taught me to notice the details, explain things plainly, and stay
+                calm when something unexpected happens.
               </p>
-              <p>
-                I apply that methodical approach to interface states, billing, account
-                provisioning, validation, and error recovery.
-              </p>
+              <p>Those habits come with me when I sit down to write software.</p>
             </div>
 
             <ol className="principles reveal">
@@ -300,15 +297,15 @@ export default function Home() {
         <section className="availability-section" id="availability" aria-labelledby="availability-title">
           <div className="availability-inner shell reveal">
             <div>
-              <p className="eyebrow">Availability</p>
-              <h2 id="availability-title">Available for full-stack project work.</h2>
+              <p className="eyebrow">Project work</p>
+              <h2 id="availability-title">I&apos;m open to new projects.</h2>
             </div>
             <div className="availability-copy">
               <p>
-                I&apos;m available for responsive websites, subscription signup and billing,
-                and operational tools.
+                I work on responsive websites, subscription and billing flows, and practical
+                tools that make complicated work easier to manage.
               </p>
-              <span className="availability-status"><i /> Available for project work</span>
+              <span className="availability-status"><i /> Currently available</span>
             </div>
           </div>
         </section>
