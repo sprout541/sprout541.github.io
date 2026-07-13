@@ -39,7 +39,7 @@ test("server-renders Ariele Radford's portfolio", async () => {
   assert.match(html, /Skip to content/);
   assert.match(html, /href="https:\/\/myhaven\.pet"/);
   assert.match(html, /property="og:image"/);
-  assert.match(html, /http:\/\/localhost\/og\.png/);
+  assert.match(html, /https:\/\/sprout541\.github\.io\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
 

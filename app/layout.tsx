@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { DM_Serif_Display, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -16,44 +15,42 @@ const sans = Manrope({
   display: "swap",
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "localhost:3000";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.startsWith("localhost") ? "http" : "https");
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://sprout541.github.io";
+const title = "Ariele Radford — Full-stack developer + Nurse";
+const description =
+  "Portfolio of Ariele Radford, a full-stack developer and Nurse building clear, dependable systems for people doing real work.";
 
-  return {
-    metadataBase: new URL(`${protocol}://${host}`),
-    title: "Ariele Radford — Full-stack developer + Nurse",
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
     description:
-      "Portfolio of Ariele Radford, a full-stack developer and Nurse building clear, dependable systems for people doing real work.",
-    openGraph: {
-      title: "Ariele Radford — Full-stack developer + Nurse",
-      description:
-        "Clear interfaces, dependable full-stack systems, and thoughtful tools for real workflows.",
-      type: "website",
-      images: [
-        {
-          url: "/og.png",
-          width: 1730,
-          height: 909,
-          alt: "Ariele Radford — Full-stack developer + Nurse",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Ariele Radford — Full-stack developer + Nurse",
-      description:
-        "Clear interfaces, dependable full-stack systems, and thoughtful tools for real workflows.",
-      images: ["/og.png"],
-    },
-  };
-}
+      "Clear interfaces, dependable full-stack systems, and thoughtful tools for real workflows.",
+    type: "website",
+    url: "/",
+    images: [
+      {
+        url: "/og.png",
+        width: 1730,
+        height: 909,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description:
+      "Clear interfaces, dependable full-stack systems, and thoughtful tools for real workflows.",
+    images: ["/og.png"],
+  },
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
